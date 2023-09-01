@@ -3,26 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/ProjectListFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
+        android:id="@+id/ProjectListFragment"
         android:name="com.dseehappy.mobile.testapp.ui.fragments.ProjectListFragment"
         android:label="@string/projects_list_label"
         tools:layout="@layout/fragment_project_list">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            app:destination="@id/ProjectDetailsFragment" />
+        <action
+            android:id="@+id/action_ProjectListFragment_to_CreateNewFragment"
+            app:destination="@id/CreateNewFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
+        android:id="@+id/ProjectDetailsFragment"
         android:name="com.dseehappy.mobile.testapp.ui.fragments.ProjectDetailsFragment"
         android:label="@string/project_details_label"
         tools:layout="@layout/fragment_project_details">
-
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_ProjectDetailsFragment_to_ProjectListFragment"
+            app:destination="@id/ProjectListFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/CreateNewFragment"
+        android:name="com.dseehappy.mobile.testapp.ui.fragments.CreateNewFragment"
+        android:label="fragment_create_new"
+        tools:layout="@layout/fragment_create_new" />
 </navigation>
