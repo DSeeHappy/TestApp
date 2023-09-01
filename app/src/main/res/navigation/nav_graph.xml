@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.dseehappy.mobile.testapp.ProjectListFragment"
+        android:name="com.dseehappy.mobile.testapp.ui.fragments.ProjectListFragment"
         android:label="@string/projects_list_label"
         tools:layout="@layout/fragment_project_list">
 
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.dseehappy.mobile.testapp.ProjectDetailsFragment"
+        android:name="com.dseehappy.mobile.testapp.ui.fragments.ProjectDetailsFragment"
         android:label="@string/project_details_label"
         tools:layout="@layout/fragment_project_details">
 

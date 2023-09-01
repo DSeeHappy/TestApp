@@ -1,4 +1,4 @@
-package com.dseehappy.mobile.testapp
+package com.dseehappy.mobile.testapp.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
