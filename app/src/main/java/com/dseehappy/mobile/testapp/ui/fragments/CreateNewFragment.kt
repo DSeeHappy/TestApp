@@ -1,11 +1,11 @@
 package com.dseehappy.mobile.testapp.ui.fragments
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.dseehappy.mobile.testapp.R
 import com.dseehappy.mobile.testapp.viewmodels.CreateNewViewModel
 
@@ -15,7 +15,7 @@ class CreateNewFragment : Fragment() {
         fun newInstance() = CreateNewFragment()
     }
 
-    private lateinit var viewModel: CreateNewViewModel
+    private val createNewViewModel: CreateNewViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,8 +26,7 @@ class CreateNewFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(CreateNewViewModel::class.java)
-        // TODO: Use the ViewModel
+
     }
 
 }
